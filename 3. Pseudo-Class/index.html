@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- untuk memberitahu bahwa masuk ke dark mode ( class='dark')-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic-Utility</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+          theme: {
+            extend : {
+                spacing : {
+                    13: '3.25rem'
+                },
+                colors: {
+                    wpu: '#bada55',
+                    kopi: '#c0ffee'
+                },
+            },
+          },
+        };
+      </script>
+    <!-- Diatas adalah cara custom tailwind di html -->
+
+    <style type="text/tailwindcss">
+       #toggle:checked ~label div.toggle-circle {
+            @apply translate-x-3;
+       }
+    </style> 
+    <!-- Cara memasukan style ke tailwindcss -->
+</head>
+<body class="dark:bg-slate-800 dark:text-slate-200">
+
+    <!-- Membuat Dark Mode -->
+    <div class="flex justify-center">
+        <span class="text-sm text-slate-500 mr-2">light</span>
+        <input type="checkbox" id="toggle" class="hidden">
+        <label for="toggle">
+            <div class="w-9 h-5 bg-slate-500 rounded-full cursor-pointer">
+                <div class="w-4 h-4 bg-white rounded-full flex items-center p-1 toggle-circle"></div>
+            </div>
+        </label>
+        <span class="text-s, text-slate-500 ml-2">dark</span>
+    </div>
+
+
+    <button class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold block mx-auto hover:bg-sky-700 active:bg-sky-900 focus:ring focus:ring-sky-300">Simpan</button>
+
+
+    <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md hover:bg-sky-500 group">
+        <!-- group untuk dibuat di parent element dan digunakan di child element -->
+        <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white">my Card</h5>
+        <p class="text-slate-700 group-hover:text-white selection:bg-lime-300 selection:text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, ipsam nisi iste ab voluptatibus quo nemo cumque sed. Dolorem explicabo eveniet dolor deleniti quasi voluptatibus. Placeat voluptate quasi quae ex?
+        Et ipsum enim quas quos, sit recusandae blanditiis obcaecati delectus mollitia, quae quia nostrum sed. Totam, eum voluptatem labore porro maxime deleniti doloribus officiis atque odio soluta vel fuga minima.
+        Tempore, nobis natus? Possimus ex numquam sed minus voluptatum! Ipsa rem dicta temporibus ipsam eligendi illo reprehenderit saepe ad, nemo quidem eos, earum neque aperiam accusantium labore, maiores cupiditate? Accusantium.
+        Sit magni possimus ipsa voluptatum molestiae quos. Reiciendis aliquam hic eaque, quia quaerat odio molestias enim voluptatum pariatur tempora perferendis architecto fugiat quas placeat nostrum at aut soluta magnam excepturi?
+        Sed accusantium numquam dicta officiis ipsa ducimus dolore quos, sunt ipsam soluta sit iusto perspiciatis? Et rerum eligendi aut voluptatem laboriosam incidunt, ut illum. Ea corporis tempore totam numquam dignissimos!
+        Aliquam quasi eum doloremque ipsa doloribus nulla, repellat aperiam nemo ea eligendi cupiditate eaque nobis, corrupti ut ad laborum asperiores corporis, veritatis quae harum. Officiis obcaecati eius quia quaerat minus?
+        Voluptates totam molestiae quos voluptatem quis magni perferendis corrupti explicabo eaque recusandae! Dolore, nam velit consequuntur ut non, atque error distinctio suscipit eos laudantium sunt hic esse nulla provident praesentium?
+        Odit sed numquam officiis obcaecati optio natus ratione earum id ut fuga eaque hic saepe esse deserunt itaque ad, praesentium nobis cum reiciendis quia facere aliquid, neque aut! Amet, fugiat.
+        Impedit quae neque iste placeat necessitatibus perspiciatis facere sint culpa nobis. Aliquam cupiditate consequuntur accusamus labore dicta adipisci facilis quasi recusandae temporibus nam ea earum, culpa optio dolores eius sint.
+        Laborum reprehenderit, necessitatibus soluta reiciendis cumque saepe quaerat, quidem corporis sint quod dignissimos quasi labore illo debitis, et voluptatum aspernatur libero hic neque. Sed quam porro voluptatem aut nesciunt iste.</p>
+    </div>
+
+
+    <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md hover:bg-sky-500 group">
+        <form action="">
+            <span class="after: content-['*'] after:text-pink-500 after:ml-0.5">email</span>
+            <label for="email" class="block font-semibold mb-1 text-slate-700">
+                <input type='email' id="email" placeholder="Masukkan Email" class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:text-pink-700 invalid:focus:border-pink-700 peer">
+                <!-- Pseudo-class dapat ditumpuk pada tailwind css -->
+                <!-- Peer memiliki konsep sama seperti group, namun peer untuk sibling-->
+                <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">email tidak valid</p>
+            </label>
+        </form>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
