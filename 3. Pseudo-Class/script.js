@@ -1,4 +1,4 @@
-const checkbox = document.querySelector('#togg;e')
+const checkbox = document.querySelector('#toggle')
 const html = document.querySelector('html')
 // Mengambil element menggunakan DOM Selector
 
