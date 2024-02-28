@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+          theme: {
+            extend: {
+
+            }
+          }
+        }
+      </script>
+</head>
+<body></body>
+    <!-- Layouting menggunakan position ( relative , absolute, fixed, DLL)-->
+    <div class="container mx-auto">
+        <div class="border rounded-lg shadow-lg p-10 relative">
+            <div class="w-10 h-10 bg-pink-200 rounded-full flex absolute -top-1 -right-5 cursor-pointer"><span class="text-2xl m-auto">❌</span></div>
+            <img src="./img/profil.jpg" alt="profil" width="150" class="float-left m-4">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate assumenda omnis saepe cum eos, natus suscipit consectetur explicabo aspernatur quam, animi laboriosam numquam minus velit impedit magnam nihil voluptatem delectus.
+            Nulla, tempore impedit dignissimos numquam ea veniam sint nostrum nemo mollitia minima, expedita eum voluptatum dolorem delectus, debitis magnam quam! Labore beatae quis reprehenderit voluptates, fugiat quisquam delectus quaerat unde?
+            Id, ipsum debitis. Provident, ipsa. Unde aut commodi illum iusto maxime pariatur sapiente minus quisquam nobis totam. Unde laboriosam autem at ut illum quod repellat adipisci possimus dolor, tenetur labore!
+            Perferendis quas tempore fugit, ratione quibusdam magnam aperiam laborum quia? Atque culpa impedit dolor voluptatum perspiciatis porro numquam provident sit quia! Nesciunt praesentium, sequi voluptatum quibusdam suscipit tempore beatae cumque.
+            Dolorum, harum? Nam molestias ratione, hic porro nemo perferendis blanditiis modi aperiam quae delectus quis deserunt id inventore odio qui, necessitatibus voluptas expedita atque ipsum veritatis debitis pariatur nostrum tempore?
+            Voluptate incidunt quasi quod at sequi aliquam maiores molestias nostrum nihil quis, nesciunt nam! Tempora corporis recusandae distinctio minus consectetur facilis minima reiciendis nobis libero! Rem explicabo vitae laboriosam. Eius?
+            Autem beatae voluptas laboriosam magnam magni, quae, voluptatibus tempora distinctio ea eaque, a consequuntur impedit dolor enim quos porro architecto! Deleniti officia dolores quod ratione eveniet nesciunt vitae dicta asperiores?
+            Natus aut, alias, repellat ratione, aliquid temporibus corrupti ullam sed perspiciatis itaque excepturi totam saepe odio quasi aliquam numquam. Eligendi velit totam magnam accusamus hic doloribus corrupti dignissimos, molestiae id?
+            Ipsam placeat, doloremque quis reprehenderit adipisci voluptatem pariatur sint odit expedita! Eum voluptas labore culpa deserunt sint ducimus eveniet rem quod natus repellendus, nulla soluta reiciendis possimus temporibus, dolore consequatur.
+            Explicabo nam neque nihil exercitationem perspiciatis ad eligendi aliquam sunt. Quam, odit vitae quis ipsa dignissimos accusantium repudiandae impedit nostrum cumque perspiciatis delectus vero voluptatum excepturi dolorem? Provident, unde tempore?</p>
+        </div>
+    </div>
+
+    <!-- Membuat Colomn denga tailwind -->
+    <div class="container mx-auto mt-20 border rounded-lg shadow-lg p-10 columns-2">
+        <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4">
+        <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4">
+        <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4">
+        <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4">
+        <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4">
+        <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4">
+    </div>
+
+</body>
+</html>
