@@ -1,2 +1,2 @@
 # Tailwind-CSS
-Repo Belajar Tailwind
+Repo Belajar Tailwindcss
