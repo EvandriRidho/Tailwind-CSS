@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-8xl;
+        color: theme(colors.wpu);
+        /* Penggunaan theme (Function) */
+        /* @apply untuk penyimpanan utility class yang sudah ada di tailwind */
+    }
+}
+
+@layer components {
+    .grid-card {
+        @apply h-16 bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4]
+        xl:aspect-[4/3] hover:scale-125 transition-all duration-500;
+    }
+}
+/* Jika terdapat card / codingan yang berulang lebih baik dibuat 
+menjadi seperti grid-card diatas agar cukup menulis 1 kali 
+dan dapat dipanggil dengan menulis .grid-card */
+
+@layer utilities {
+    #toggle:checked ` label div.toggle-circle {
+        @aplly translate-x-3;
+    }
+}
+
+/* Jika perubahan ingin ditaruh diawal style css maka gunakan
+base, jika ditengah gunakan components, jika dibelakang gunakan utilities */
